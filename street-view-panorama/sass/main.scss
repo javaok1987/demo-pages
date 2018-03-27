@@ -1,0 +1,37 @@
+﻿@import "reset";
+
+#widget-minimap {
+  border: 1px solid #606060;
+  width: 15%;
+  min-width: 200px;
+  height: 20%;
+  min-height: 200px;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  background-color: #f0f0f0;
+  .gmnoprint div {
+    background: none !important;
+  }
+  div div a div img,
+  .gmnoprint a,
+  .gmnoprint span,
+  .gm-style-cc {
+    display: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.widget-minimap-cover {
+  display: none;
+}
