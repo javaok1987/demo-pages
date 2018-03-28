@@ -13,7 +13,7 @@ const streetViewLayer = new google.maps.StreetViewCoverageLayer();
 
 // 鷹眼圖
 const mapControl = new google.maps.Map(controlDiv, {
-  zoom: 18,
+  zoom: 15,
   mapTypeId: google.maps.MapTypeId.ROADMAP,
   draggable: true,
   zoomControl: true,
