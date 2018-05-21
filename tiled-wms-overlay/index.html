@@ -42,7 +42,7 @@
           url += '&SRS=EPSG:4326'; //set WGS84 
           url += '&WIDTH=256'; //tile size in google
           url += '&HEIGHT=256';
-          url += '&LAYERS=EMAP6_OPENDATA'; //WMS layers
+          url += '&LAYERS=EMAP'; //WMS layers
           url += '&STYLES='
           url += '&FORMAT=image/JPG'; //WMS format
           // url += '&BGCOLOR=0xFFFFFF';
@@ -55,13 +55,13 @@
         tileSize: new google.maps.Size(256, 256),
         isPng: true,
         name: '臺灣通用電子地圖',
-        maxZoom: 17
+        maxZoom: 23
 
       });
 
       function initMap() {
         var mapOptions = {
-          zoom: 17,
+          zoom: 16,
           center: josefov,
           mapTypeControlOptions: {
             mapTypeIds: ['臺灣通用電子地圖', google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN],
@@ -72,6 +72,18 @@
         map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
         map.mapTypes.set('臺灣通用電子地圖', EMAP6_OPENDATA);
         map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+
+        var marker_hf = new google.maps.Marker({
+          position: new google.maps.LatLng(25.030337, 121.549271),
+          title: "好房網",
+          map:map
+        });
+
+        var marker_hs = new google.maps.Marker({
+          position: new google.maps.LatLng(25.0311984,121.5442104),
+          title: "好房網",
+          map:map
+        });
 
       }
     </script>
